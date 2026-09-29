@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <span class="material-icons logo-icon">lightbulb</span>
+            <span class="header-title">Keep</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="note-input-container" id="note-input-container">
+            <form class="note-form" id="note-form">
+                <input type="text" id="note-title" class="note-title-input" placeholder="Title" autocomplete="off">
+                <textarea id="note-text" class="note-text-input" placeholder="Take a note..." rows="1"></textarea>
+                <div class="form-actions" id="form-actions">
+                    <button type="submit" class="btn-close" id="form-close-btn">Close</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="notes-grid" id="notes-grid">
+            <!-- Notes will be injected here -->
+        </div>
+    </main>
+
+    <!-- Modal for editing note -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <form class="modal-form" id="modal-form">
+                <input type="hidden" id="modal-note-id">
+                <input type="text" id="modal-note-title" class="note-title-input" placeholder="Title" autocomplete="off">
+                <textarea id="modal-note-text" class="note-text-input" placeholder="Take a note..." rows="3"></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn-close" id="modal-close-btn">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
